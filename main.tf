@@ -32,11 +32,6 @@ module "curated-module" {
 
 resource "null_resource" "previous" {}
 
-# This resource will create (at least) 2 minutes after null_resource.previous
-resource "null_resource" "next" {
-  depends_on = [time_sleep.wait_2_minutes]
-}
-
 resource "aws_s3_bucket" "rum" {
   count  = var.enable_aws ? 1 : 0
   bucket = "rum-miguel-bucket"
