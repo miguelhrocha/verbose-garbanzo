@@ -8,3 +8,8 @@ variable "password" {
   type        = string
   description = "My secret password don't hack me pls"
 }
+
+variable "enable_aws" {
+  type       = bool
+  description = "enable aws resources"
+}
