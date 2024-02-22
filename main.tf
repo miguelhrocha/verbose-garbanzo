@@ -42,3 +42,13 @@ resource "time_sleep" "wait_2_minutes" {
 resource "null_resource" "next" {
   depends_on = [time_sleep.wait_2_minutes]
 }
+
+resource "aws_s3_bucket" "rum" {
+  count  = var.enable_aws ? 1 : 0
+  bucket = "rum-miguel-bucket"
+
+  tags = {
+    Name        = "RUM"
+    Environment = "Dev"
+  }
+}
