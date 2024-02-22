@@ -4,5 +4,5 @@ output "my_password" {
 }
 
 output "rum_bucket" {
-  value    = var.enable_aws ? aws_s3_bucket.rum
+  value    = var.enable_aws ? aws_s3_bucket.rum : null
 }
