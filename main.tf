@@ -22,22 +22,5 @@ module "module-1" {
   # insert required variables here
   password = "ZAQ!xsw2"
 }
-  
-module "curated-module" {
-  source  = "briancain/helloworld/aws"
-  version = "2020.4.21"
-  # insert required variables here
-  password = "ZAQ!xsw2"
-}
 
 resource "null_resource" "previous" {}
-
-resource "aws_s3_bucket" "rum" {
-  count  = var.enable_aws ? 1 : 0
-  bucket = "rum-miguel-bucket"
-
-  tags = {
-    Name        = "RUM"
-    Environment = "Dev"
-  }
-}
