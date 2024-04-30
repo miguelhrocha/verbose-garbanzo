@@ -24,8 +24,8 @@ module "module-1" {
 }
 
 module "helloworld-2" {
-  source  = "khlx-fdo-docker-backup-and-restore.tfe-release-test.aws.ptfedev.com/registry-release-test/helloworld-2/aws"
-  version = "1.1.0"
+  source  = "tfcdev-15922928.eu.ngrok.io/hashicorp/helloworld-2/aws"
+  version = "1.0.0"
   password = "ZAQ!xsw2"
   # insert required variables here
 }
