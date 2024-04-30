@@ -23,11 +23,4 @@ module "module-1" {
   password = "ZAQ!xsw2"
 }
 
-module "helloworld-2" {
-  source  = "tfcdev-15922928.eu.ngrok.io/hashicorp/helloworld-2/aws"
-  version = "1.0.0"
-  password = "ZAQ!xsw2"
-  # insert required variables here
-}
-
 resource "null_resource" "previous" {}
